@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="demoapp">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-touch.js"></script>
+    <script src="../dist/angular-mm-swipe.js"></script>
+    <style>
+      .slideshow {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 200px;
+        width: 200px;
+        position: relative;
+      }
+      ul, li {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: block;
+        clear: both;
+      }
+
+      .arrows {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .slider {
+        width: 200px;
+        height: 200px;
+      }
+
+      .slides {
+        height: 100%;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        -webkit-user-drag: none;
+      }
+    </style>
+    <script>
+        var app = angular.module("demoapp", ['mm-module']);
+
+        app.controller("DemoController", [function() {
+
+       }]);
+    </script>
+  </head>
+  <body ng-controller="DemoController">
+    <div class="slider">
+      <mm-swipe>
+          <ul>
+              <li>
+                <img src="img1.jpg" alt="">
+              </li>
+              <li>
+                <img src="img2.jpg" alt="">
+              </li>
+              <li>
+                <img src="img3.jpg" alt="">
+              </li>
+          </ul>
+      </mm-swipe>
+    </div>
+  </body>
+</html>
